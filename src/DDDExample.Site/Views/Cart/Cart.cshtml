@@ -1,0 +1,48 @@
+﻿@using DDDExample.Cqrs.Query.OrderItem.Models
+@model DDDExample.Cqrs.Query.OrderItem.Models.Cart
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Your Shopping Cart</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                Product
+            </th>
+            <th>
+                Qtd
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderItens)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qtd)
+                </td>
+                <td>
+                    @Html.ActionLink("Add", "AddItemCart", new { idOrderItem = item.Id }) |
+                    @Html.ActionLink("Less", "LessItemCart", new { idOrderItem = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
+
+<h3>Total: @Model.TotalPrice</h3>

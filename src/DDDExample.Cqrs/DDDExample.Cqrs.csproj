@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Query\Order\Models\" />
+    <Folder Include="Query\Order\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DDDExample.Domain\DDDExample.Domain.csproj" />
+    <ProjectReference Include="..\DDDExample.SharedKernel\DDDExample.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>

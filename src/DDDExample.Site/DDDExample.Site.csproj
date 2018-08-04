@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DDDExample.Cqrs\DDDExample.Cqrs.csproj" />
+    <ProjectReference Include="..\DDDExample.Data\DDDExample.Data.csproj" />
+    <ProjectReference Include="..\DDDExample.Identity\DDDExample.Identity.csproj" />
+    <ProjectReference Include="..\DDDExample.IoC\DDDExample.IoC.csproj" />
+    <ProjectReference Include="..\DDDExample.SharedKernel\DDDExample.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>
