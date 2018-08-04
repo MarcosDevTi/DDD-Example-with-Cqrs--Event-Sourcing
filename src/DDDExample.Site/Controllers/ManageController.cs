@@ -508,7 +508,7 @@ namespace DDDExample.Site.Controllers
         {
             return string.Format(
                 AuthenicatorUriFormat,
-                _urlEncoder.Encode("Equinox Project"),
+                _urlEncoder.Encode("DDDExample Project"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }
